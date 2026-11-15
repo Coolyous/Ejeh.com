@@ -218,6 +218,269 @@ footer {
         box-shadow: 0 10px 10px rgba(255, 255, 255, 0.75);
     }
 
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.logo-def {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sign-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 1.5rem;
+}
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navlogo {
+    width: 3rem;
+    margin-left: 10px;
+}
+
+.def {
+    font-size: 1.15rem;
+    font-family: "Lalezar", sans-serif;
+    color: #008a49;
+    margin-left: 0;
+}
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #008a49;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 1.05;
+    font-family: "Lalezar", sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: 0.3ms;
+}
+
+.nav-links li a:hover {
+    color: #008a49;
+    text-shadow: 0 0 10px #008a49;
+}
+
+.sign-in {
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #29e68e;
+    color: #03350e;
+    font-family: "Lalezar", sans-serif;
+    box-shadow: 0 0 15px #008a49;
+    transition: 0.3ms;
+}
+
+.sign-in:hover {
+    background: #008a49;
+    box-shadow: 0 0 25px #008a49;
+}
+
+.main {
+    width: 100%; 
+    background: linear-gradient(to top,rgba(0, 138, 73, 0.93)),url(Ghabos.png);
+    background-position: center;
+    background-size:cover;
+    height: 100vh; 
+    margin: 0;  
+    padding: 0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.subject {
+    text-align: center;
+}
+
+.para {
+    width: calc(100% - 50px);
+    height: auto;
+    border-radius: 30px;
+    font-family: "Vazirmatn", sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.text {
+    margin: 10px 20px 20px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    margin: 20px;
+    
+}
+
+footer {
+    background-color: #63e479;
+}
+
+.footer-main {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    padding: 10px;
+    font-family: "Vazirmatn", sans-serif;
+    text-align: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.first {
+    gap: 20px;
+}
+
+.second {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-contentli a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-content a i {
+    font-size: 2em;
+    color: #008a49;
+    opacity: 0.9;
+}
+
+@media (max-width: 880px) {
+
+    .navbar-div {
+        position: relative;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 1000;
+    }
+
+    .mobile-menu {
+        display: none;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 250px;
+        height: 100vh;
+
+        padding: 5rem 1.5rem;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 10px rgba(255, 255, 255, 0.75);
+    }
+
+    /*رسپانسیو کردن فوتر*/
+    .footer-content .first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* وقتی روی همبرگر کلیک شد */
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem;
+        margin: 0;
+    }
+
+    .sign-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    /* تبدیل همبرگر به X */
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    
     /* وقتی روی همبرگر کلیک شد */
     .mobile-menu.active {
         display: flex;
