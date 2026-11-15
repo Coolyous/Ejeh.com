@@ -439,7 +439,7 @@ footer {
     }
 
     /*رسپانسیو کردن فوتر*/
-    .footer-content .first {
+    .footer-content.first {
         display: flex;
         flex-direction: column;
         align-items: center;
